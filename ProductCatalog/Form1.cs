@@ -121,6 +121,7 @@ namespace ProductCatalog
                 ProducerProduct = product.ProduceProduct,
                 PriceProduct = product.Price.ToString() + " $",
                 CountProduct = product.Count.ToString() + " רע.",
+                Image = Image.FromFile(product.Image)
             };
             if (table.CountProduct == "0 רע.") table.BackColor = Color.Gray;
             else table.BackColor = Color.LightSkyBlue;

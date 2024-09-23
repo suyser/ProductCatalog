@@ -39,6 +39,9 @@
             PriceBox = new TextBox();
             CountBox = new TextBox();
             AddButton = new Button();
+            AddPicture = new Button();
+            ImagePicBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)ImagePicBox).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -132,11 +135,32 @@
             AddButton.UseVisualStyleBackColor = true;
             AddButton.Click += AddButtonClick;
             // 
+            // AddPicture
+            // 
+            AddPicture.Location = new Point(191, 217);
+            AddPicture.Name = "AddPicture";
+            AddPicture.Size = new Size(143, 29);
+            AddPicture.TabIndex = 11;
+            AddPicture.Text = "Добавить фото";
+            AddPicture.UseVisualStyleBackColor = true;
+            AddPicture.Click += AddPicture_Click;
+            // 
+            // ImagePicBox
+            // 
+            ImagePicBox.Location = new Point(12, 217);
+            ImagePicBox.Name = "ImagePicBox";
+            ImagePicBox.Size = new Size(167, 143);
+            ImagePicBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            ImagePicBox.TabIndex = 12;
+            ImagePicBox.TabStop = false;
+            // 
             // AddProduct
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(346, 450);
+            Controls.Add(ImagePicBox);
+            Controls.Add(AddPicture);
             Controls.Add(AddButton);
             Controls.Add(CountBox);
             Controls.Add(PriceBox);
@@ -153,6 +177,7 @@
             Name = "AddProduct";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавить товар";
+            ((System.ComponentModel.ISupportInitialize)ImagePicBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -170,5 +195,7 @@
         private TextBox PriceBox;
         private TextBox CountBox;
         private Button AddButton;
+        private Button AddPicture;
+        private PictureBox ImagePicBox;
     }
 }

@@ -51,6 +51,9 @@ namespace ProductCatalog
                     Price = Price,
                     ProduceProduct = Producer,
                     Count = int.Parse(CountBox.Text),
+                    Image = WayToPic
+
+
                 });
                 db.SaveChanges();
 
@@ -81,6 +84,7 @@ namespace ProductCatalog
                     string destinationPath = Path.Combine(projectDirectory, imageName);
                     WayToPic = projectDirectory + "\\" + imageName;
                     File.Copy(imagePath, destinationPath, true);
+                    ImagePicBox.Image = Image.FromFile(WayToPic);
                 }
             }
 
@@ -150,6 +154,7 @@ namespace ProductCatalog
             this.ProducerBox = ProducerBox;
             this.PriceBox = PriceBox;
             CountBox = count;
+            ImagePath = image_path;
         }
     }
 }
